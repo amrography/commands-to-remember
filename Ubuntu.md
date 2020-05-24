@@ -37,7 +37,13 @@ sudo do-release-upgrade
 ## Uninstall package
 
 ```bash
-dpkg --list 'gimp'
+# List all packages if you want
+dpkg --list 'gi*'
+
+# Just remove
+sudo apt-get remove --purge gimp
+
+# Or compete remove
 sudo apt-get purge --auto-remove gimp
 ```
 
@@ -52,13 +58,22 @@ sudo update-alternatives --set php /usr/bin/php5.6
 ---
 
 ## Delete old linux image
+  
+```bash
+# Check current image name
+uname -r
 
-- Check current image name
-  - `uname -r`
-- List all images
-  - `dpkg --list 'linux-image-*'`
-- Remove all the kernels below the current one
-  - `sudo apt-get purge linux-image-x.x.x.x-genrice`
-- Update gurb2
-  - `sudo update-gurb2`
-- Reboot
+# List all images
+dpkg --list 'linux-image-*'
+
+# Remove all the kernels below the current one
+sudo apt-get purge linux-image-x.x.x.x-genrice
+
+# Update gurb2
+sudo update-gurb2
+
+# Reboot
+sudo reboot
+```
+
+---
