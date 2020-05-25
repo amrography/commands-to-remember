@@ -65,8 +65,8 @@ dpkg --list 'linux-image-*'
 # Remove all the kernels below the current one
 sudo apt-get purge linux-image-x.x.x.x-genrice
 
-# Update gurb2
-sudo update-gurb2
+# Update grub2
+sudo update-grub2
 
 # Reboot
 sudo reboot
