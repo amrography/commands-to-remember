@@ -4,6 +4,9 @@
 
 ```shell
 git commit -m "First commit"
-git stash
 git pull
 ```
+
+## ignore changes
+
+`git stash`

@@ -1,4 +1,7 @@
-# apache2
+# apache2 <!-- omit in toc -->
+
+- [403 issue](#403-issue)
+- [Install and switch php version](#install-and-switch-php-version)
 
 ## 403 issue
 
@@ -45,3 +48,21 @@ sudo adduser <username> www-data
 sudo chown -R www-data:www-data /var/www
 sudo chmod -R g+rw /var/www
 ```
+
+## Install and switch php version
+
+1. Install php5
+
+   `sudo apt-get install apache2 php5 libapache2-mod-php5`
+
+2. Check if module is loaded
+
+    `a2query -m php5`
+
+3. Enable if not enabled
+
+   `sudo a2enmod php5`
+
+4. Restart apache2
+
+    `sudo service restart apache2`
